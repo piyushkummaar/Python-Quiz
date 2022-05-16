@@ -1,0 +1,14 @@
+Task is to scrap data from a google sheets and write into csv after some validation.
+
+1. Scrap the table from https://docs.google.com/spreadsheets/d/1H1a9eBamflt3w-4BPEk1kJYc4VgsDBWlDjkS0hV5tAY/edit#gid=0
+
+2. validate each scraped row using the api: https://tools.usps.com/tools/app/ziplookup/zipByAddress
+	
+	Web URL : https://tools.usps.com/zip-code-lookup.htm?byaddress
+
+	- send body data
+	- use header: "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36 Edg/101.0.1210.39"}
+
+3. write csv file after validation with extra column 'verified' as boolean value.
+
+Usage-  python your-script.py output_file_name -> writes output_file_name.csv at cwd.
